@@ -75,10 +75,10 @@ class _$CustomerDatabase extends CustomerDatabase {
   CustomerDAO? _getDAOInstance;
 
   Future<sqflite.Database> open(
-      String path,
-      List<Migration> migrations, [
-        Callback? callback,
-      ]) async {
+    String path,
+    List<Migration> migrations, [
+    Callback? callback,
+  ]) async {
     final databaseOptions = sqflite.OpenDatabaseOptions(
       version: 1,
       onConfigure: (database) async {
@@ -112,41 +112,41 @@ class _$CustomerDatabase extends CustomerDatabase {
 
 class _$CustomerDAO extends CustomerDAO {
   _$CustomerDAO(
-      this.database,
-      this.changeListener,
-      )   : _queryAdapter = QueryAdapter(database),
+    this.database,
+    this.changeListener,
+  )   : _queryAdapter = QueryAdapter(database),
         _customerItemInsertionAdapter = InsertionAdapter(
             database,
             'CustomerItem',
-                (CustomerItem item) => <String, Object?>{
-              'id': item.id,
-              'firstName': item.firstName,
-              'lastName': item.lastName,
-              'address': item.address,
-              'birthday': item.birthday
-            }),
+            (CustomerItem item) => <String, Object?>{
+                  'id': item.id,
+                  'firstName': item.firstName,
+                  'lastName': item.lastName,
+                  'address': item.address,
+                  'birthday': item.birthday
+                }),
         _customerItemUpdateAdapter = UpdateAdapter(
             database,
             'CustomerItem',
             ['id'],
-                (CustomerItem item) => <String, Object?>{
-              'id': item.id,
-              'firstName': item.firstName,
-              'lastName': item.lastName,
-              'address': item.address,
-              'birthday': item.birthday
-            }),
+            (CustomerItem item) => <String, Object?>{
+                  'id': item.id,
+                  'firstName': item.firstName,
+                  'lastName': item.lastName,
+                  'address': item.address,
+                  'birthday': item.birthday
+                }),
         _customerItemDeletionAdapter = DeletionAdapter(
             database,
             'CustomerItem',
             ['id'],
-                (CustomerItem item) => <String, Object?>{
-              'id': item.id,
-              'firstName': item.firstName,
-              'lastName': item.lastName,
-              'address': item.address,
-              'birthday': item.birthday
-            });
+            (CustomerItem item) => <String, Object?>{
+                  'id': item.id,
+                  'firstName': item.firstName,
+                  'lastName': item.lastName,
+                  'address': item.address,
+                  'birthday': item.birthday
+                });
 
   final sqflite.DatabaseExecutor database;
 

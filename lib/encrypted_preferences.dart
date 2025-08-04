@@ -1,5 +1,6 @@
-import 'dart:async';
 import 'package:encrypted_shared_preferences/encrypted_shared_preferences.dart';
+
+final EncryptedSharedPreferences encryptedPreferences = EncryptedSharedPreferences();
 
 class EncryptedPreferences {
   final EncryptedSharedPreferences _prefs = EncryptedSharedPreferences();

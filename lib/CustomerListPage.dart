@@ -1,8 +1,8 @@
 import 'package:encrypted_shared_preferences/encrypted_shared_preferences.dart';
 import 'package:flutter/material.dart';
-import 'package:cst2335_final_project/CustomerDatabase.dart';
-import 'package:cst2335_final_project/CustomerRepository.dart';
-import 'package:cst2335_final_project/CustomerDAO.dart';
+import 'package:final_project_cst2335/CustomerDatabase.dart';
+import 'package:final_project_cst2335/CustomerRepository.dart';
+import 'package:final_project_cst2335/CustomerDAO.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'CustomerItem.dart';
 
